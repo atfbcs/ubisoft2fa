@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+@font-face {
+    font-family: "Ubisoft";
+    src: url(../fonts/Ubisoft_Sans_Bold.ttf) format("truetype");
+}
+
+.slider-container {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: #1e1e1e00;
+    border-radius: 10px;
+    font-family: "Ubisoft", sans-serif;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.slide img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.controls {
+    margin-top: 10px;
+}
+
+button {
+    margin: 0 7px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 14px;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: none;
+    transform: scale(1.8);
+    opacity: .8;
+    transition: all .3s ease;
+}
+
+button:hover {
+    transform: scale(2.2);
+    opacity: 1;
+}

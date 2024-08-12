@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructions</title>
+    <link rel="stylesheet" href="css/info.css">
+    <link rel="stylesheet" href="css/font awsome/css/all.css">
+</head>
+<body>
+    <div class="slider-container">
+        <div class="slider">
+            <!--
+            <div class="slide">
+                <img src="img/um.png" alt="User Manual">
+            </div>
+            -->
+            <div class="slide">
+                <img src="img/info1.png" alt="Step 1">
+            </div>
+            <div class="slide">
+                <img src="img/info2.png" alt="Step 2">
+            </div>
+            <div class="slide">
+                <img src="img/info3.png" alt="Step 3">
+            </div>
+            <div class="slide">
+                <img src="img/info4.png" alt="Step 3">
+            </div>
+            <div class="slide">
+                <img src="img/info5.png" alt="Step 3">
+            </div>
+            <div class="slide">
+                <img src="img/info6.png" alt="Step 3">
+            </div>
+            <div class="slide">
+                <img src="img/info7.png" alt="Step 3">
+            </div>
+            <div class="slide">
+                <img src="img/info8.png" alt="Step 3">
+            </div>
+            <div class="slide">
+                <img src="img/info9.png" alt="Step 3">
+            </div>
+            <div class="slide">
+                <img src="img/info10.png" alt="Step 3">
+            </div>
+            <!-- Add more slides as needed -->
+        </div>
+    </div>
+    <div class="controls">
+        <button id="prev"><i class="fa-solid fa-hand-point-left"></i></button>
+        <button id="next"><i class="fa-solid fa-hand-point-right"></i></button>
+    </div>
+    
+    <script>
+        let currentSlide = 0;
+
+        document.getElementById('next').addEventListener('click', () => {
+            const slides = document.querySelectorAll('.slide');
+            if (currentSlide < slides.length - 1) {
+                currentSlide++;
+                updateSlider();
+            }
+        });
+
+        document.getElementById('prev').addEventListener('click', () => {
+            if (currentSlide > 0) {
+                currentSlide--;
+                updateSlider();
+            }
+        });
+
+        function updateSlider() {
+            const slider = document.querySelector('.slider');
+            const slideWidth = document.querySelector('.slide').clientWidth;
+            slider.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+        }
+    </script>
+</body>
+</html>

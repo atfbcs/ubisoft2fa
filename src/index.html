@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ubisoft.2fa</title>
+    <link rel="stylesheet" href="css/main.css">
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.css">-->
+    <link rel="stylesheet" href="css/font awsome/css/all.css">
+    <link rel="shortcut icon" href="img/ubisoft.png" type="image/x-icon">
+</head>
+<body>
+    <main> 
+        <div id="notifications">
+            <div><i class="fa-solid fa-bell"></i><p id="notif-text"></p></div>
+        </div>
+        <header >
+            <nav >
+                <div class="nav-buttons">
+                    <button id="minimize"><i class="fa-solid fa-minus"></i></button>
+                    <button id="close"><i class="fa-brands fa-mixer"></i></button>
+
+                    <!-- for brainrot mode
+                    <button id="close"><i class="fa-brands fa-xbox"></i></button>
+                    <button id="close"><i class="fa-brands fa-x-twitter"></i></button>
+                    -->
+
+                </div>
+            </nav>
+        </header>
+
+        <div id="codeLabel"><img src="img/ubisoft.webp"></div>
+        <div id="timerBarContainer">
+            <div id="timerBar" style="height: 100%; width: 100%; background-color: white;"></div>
+        </div>
+
+        <i id="scroll-up" class="fa-solid fa-caret-up scrolls"></i>
+        <i id="scroll-down" class="fa-solid fa-caret-down scrolls"></i>
+        <div class="userlist-container">        
+            <div id="userlist">
+                <p>
+                    <!-- Names will be appended here by JavaScript -->
+                </p>
+            </div>
+        </div>
+
+        <div id="edit-user-form" >
+            <h2>Edit Usernames</h2>
+            <div id="edit-user-list" class="scrollable-container"></div>
+            <button id="save-changes"><i class="fa-solid fa-check"></i></button>
+            <button id="cancel-edit"><i class="fa-solid fa-xmark-large"></i></button>
+        </div>
+        
+        <div id="login-form">
+            <p>Log in to Ubisoft</p>
+            <form action="#">
+                <label for="user" id="login_input_text">Username</label>
+                <label for="user"><i class="fa-solid fa-user iconlabel"></i></label>
+                <input type="text" id="text" name="username" placeholder="Enter your username" required>
+
+                <label for="email" id="login_input_text">Email address</i></label>
+                <label for="email"><i class="fa-solid fa-envelope iconlabel"></i></label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                
+                <label for="password" id="login_input_text">2-Step Verification Key</label>
+                <label for="password"><i class="fa-solid fa-lock iconlabel"></i></label>
+                <input type="password" id="factor" name="2fa" placeholder="Enter Secret Key" required>
+
+                <button type="button" id="togglePassword"><i class="fa-solid fa-eye"></i></button>
+
+                <button id="key" type="submit"><i class="fa-solid fa-user-plus"></i></button>
+                <i id="qr-import" class="fa-thin fa-qrcode button-icon"></i>
+            </form>
+        </div>
+
+        <div id="removing">
+            <p>Remove Users</p>
+            <form action="#">
+                <label for="user" id="login_input_text">Username</label>
+                <label for="user"><i class="fa-solid fa-user"></i></label>
+                <select id="user-dropdown" name="username" required>
+                    <!-- Options will be dynamically populated here -->
+                </select>
+
+                <button id="remove-user-button" type="submit"><i class="fa-solid fa-user-minus"></i></button>
+            </form>
+        </div>
+
+        <div id="qr-import-form">
+            <p>QR-import</p>
+            <form action="#">
+                <label for="user" id="login_input_text">Username</label>
+                <label for="user"><i class="fa-solid fa-user iconlabel"></i></label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                
+                <input type="file" name="qr-image" id="qr-image" accept="image/png, image/jpeg" required style="display: none;">
+                <label for="qr-image" class="custom-file-upload">Import QR Code</label>
+
+                <button id="add-user-button" type="submit"><i class="fa-solid fa-user-plus"></i></button>
+            </form>
+        </div>
+
+        <div id="about-section">
+            <iframe src="info.html" frameborder="0" width="600" height="430"></iframe>
+        </div>
+    </main>
+    
+    <div id="profile">
+        <img class="pfp" src="img/default.png" alt="Profile Picture">
+    </div>
+
+    <div id="bottom-buttons">
+        <i id="edit-users" class="fa-solid fa-user-pen button-icon"></i> 
+        <i id="add-account" class="fa-solid fa-hexagon-plus button-icon"></i>
+        <i id="remove-account" class="fa-solid fa-hexagon-minus button-icon"></i> 
+        <i id="import-accounts" class="fa-solid fa-users button-icon" ></i>   
+        <input type="file" id="file-input" style="display: none;" accept=".json, .txt"/>
+    </div>
+
+    <!--
+    <div id="temp">
+        <i id="qr-import" class="fa-thin fa-qrcode button-icon"></i>
+    </div>
+    -->
+
+
+    <div id="apps">
+        <iframe src="https://r6.tracker.network/" frameborder="0" id="r6s"></iframe>
+        <div id="sidebar">
+            <button id="open-ubisoft"><img src="img/ubisoft.png" alt=""></button>
+            <button id="open-discord"><img src="img/discord.png" alt=""></button>
+            <!--<button id="open-yt"><img src="img/yt.png" alt=""></button>-->
+            <!--<button id="open-spotify"><img src="img/spotify.png" alt=""></button>-->
+            <!--<button id="open-soundcloud"><img src="img/soundcloud.png" alt=""></button>-->
+            <button id="open-twitterx"><img src="img/x.jpg" alt=""></button>
+            <button id="open-r6tracker"><img src="img/trn.png" alt=""></button>
+        </div>
+    </div>
+
+    <div id="help">
+        <i id="about" class="fa-solid fa-question button-icon"></i>
+    </div>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/renderer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.js"></script>
+</body>
+</html>
+
+<!--
+json -> idk
+placeholder#
+click to copy 2fa#
+buttons / shadows#
+app icons#
+font awesome
+info# but idk
+
+can't add another player after 1 add? -> somtimes / bug
+info?
+size?
+copy paste only when number is active?
+notifications?
+-->
