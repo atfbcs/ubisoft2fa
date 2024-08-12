@@ -4,7 +4,7 @@ Here's a better-organized setup guide using Markdown:
 
 Follow these steps to set up your Electron project:
 - Download npm and node.js first.
-- If you only want to be able to run it and not build it you can skip step 1-3.
+- If you only want to be able to run it and not build it you can skip step 1-3. [Download](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 
 1. **Initialize the Project** *(optional)*:
    - Create a `package.json` file.
