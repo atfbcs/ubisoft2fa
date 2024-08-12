@@ -30,10 +30,10 @@
   },
   "build": {
     "extraResources": [
-        {
-            "from": "src",
-            "to": "src"
-        }
+      {
+        "from": "src",
+        "to": "src"
+      }
     ]
-}
+  }
 }
